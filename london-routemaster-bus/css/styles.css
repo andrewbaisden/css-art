@@ -1,0 +1,1332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--main-window-color: rgb(190, 242, 255);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Roboto', sans-serif;
+	background: #dadada;
+	display: flex;
+	justify-content: center;
+}
+
+.sky-bg {
+	width: 100%;
+	height: 20rem;
+	background: rgb(132, 216, 255);
+	position: absolute;
+}
+
+.road-markings-container-top {
+	width: 100%;
+	height: 20rem;
+	/* background: rgb(0, 0, 0); */
+	position: absolute;
+	top: 20rem;
+	display: flex;
+	align-items: flex-end;
+	flex-flow: row;
+	justify-content: space-around;
+}
+
+.road-markings-container-bottom {
+	width: 100%;
+	height: 20rem;
+	/* background: rgb(0, 0, 0); */
+	position: absolute;
+	top: 50rem;
+	display: flex;
+	align-items: flex-end;
+	flex-flow: row;
+	justify-content: space-around;
+}
+
+.road-markings {
+	width: 10rem;
+	height: 1rem;
+	background: white;
+}
+
+.routemaster-bus-image {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100rem;
+	height: 70rem;
+}
+
+.routemaster-bus-shadow {
+	position: absolute;
+	right: 0rem;
+	top: 55rem;
+	width: 85rem;
+	height: 10rem;
+	background: black;
+	transform: skew(50deg);
+	opacity: 0.7;
+	border-radius: 10%;
+}
+
+.routemaster-bus-reference-image img {
+	width: 100rem;
+	height: 70rem;
+}
+
+.routemaster-bus-container {
+	width: 68.6rem;
+	height: 49rem;
+	/* background: greenyellow; */
+	opacity: 1;
+	position: absolute;
+	left: 14.5rem;
+	top: 11rem;
+}
+.routemaster-bus-roof-container {
+	width: 87.5rem;
+	height: 13rem;
+	/* background: rgb(255, 255, 255); */
+	display: flex;
+	flex-flow: row;
+	position: relative;
+	z-index: 2;
+}
+
+.routemaster-bus-roof-front {
+	margin-left: 3.5rem;
+	margin-top: 1.1rem;
+	width: 19rem;
+	height: 4.2rem;
+	background: rgb(230, 0, 0);
+	background: linear-gradient(90deg, rgba(230, 0, 0, 1) 0%, rgba(181, 33, 33, 1) 35%, rgba(198, 36, 36, 1) 100%);
+	border-radius: 100% 0% 46% 54% / 100% 100% 0% 0%;
+	transform: rotate(-7deg);
+}
+
+.routemaster-bus-roof-middle {
+	margin-top: 1.1rem;
+	margin-left: -1.3rem;
+	width: 65rem;
+	height: 4.1rem;
+	background: rgb(198, 36, 36);
+	background: linear-gradient(90deg, rgba(198, 36, 36, 1) 0%, rgba(252, 60, 60, 1) 35%, rgba(255, 89, 89, 1) 100%);
+	transform: rotate(2deg);
+}
+
+.routemaster-bus-roof-back {
+	margin-top: 2rem;
+	margin-left: -1rem;
+	height: 11rem;
+	width: 3rem;
+	border-radius: 0% 100% 0% 100% / 100% 100% 0% 0%;
+	background: rgb(255, 89, 89);
+	background: linear-gradient(90deg, rgba(255, 89, 89, 1) 0%, rgba(255, 89, 89, 1) 35%, rgba(255, 89, 89, 1) 100%);
+	transform: rotate(0deg);
+}
+
+.routemaster-bus-window-top-container {
+	position: relative;
+	top: -9.9rem;
+	height: 15.5rem;
+	width: 86rem;
+	/* background: indigo; */
+	opacity: 1;
+	display: flex;
+	flex-flow: row;
+	z-index: 1;
+}
+
+.routemaster-bus-window-top-front {
+	margin-top: 1rem;
+	margin-left: 4rem;
+	width: 26rem;
+	height: 7.4rem;
+	transform: skew(-20deg) rotate(-7deg);
+	border-left: 0.5rem solid black;
+	background: var(--main-window-color);
+	position: relative;
+	z-index: 2;
+	border-top: 0.5rem solid black;
+	border-bottom: 0.5rem solid black;
+}
+
+.routemaster-bus-window-top-middle {
+	margin-top: 1.6rem;
+	margin-left: -5rem;
+	width: 60rem;
+	height: 6.8rem;
+	/* background: rgb(255, 208, 0); */
+	transform: rotate(2deg) skew(0deg);
+	display: flex;
+	flex-flow: row;
+	position: relative;
+	z-index: 3;
+	border-top: 0.5rem solid black;
+	/* border-bottom: 0.5rem solid black; */
+}
+
+.routemaster-bus-window-top-window-one {
+	margin-left: -1rem;
+	width: 12rem;
+	height: 7rem;
+	background: var(--main-window-color);
+	border-right: 0.5rem solid black;
+	border-left: 0.5rem solid black;
+	position: relative;
+	z-index: 2;
+}
+
+.routemaster-bus-window-top-window-two,
+.routemaster-bus-window-top-window-three,
+.routemaster-bus-window-top-window-four,
+.routemaster-bus-window-top-window-five,
+.routemaster-bus-window-top-window-six,
+.routemaster-bus-window-top-window-seven,
+.routemaster-bus-window-top-window-eight {
+	margin-left: 0rem;
+	width: 7rem;
+	height: 7rem;
+	background: var(--main-window-color);
+	border-right: 0.5rem solid black;
+}
+
+.routemaster-bus-advert-container {
+	width: 87rem;
+	height: 16rem;
+	/* background: yellow; */
+	opacity: 1;
+	position: relative;
+	bottom: 20rem;
+	display: flex;
+	flex-flow: row;
+	z-index: 4;
+}
+
+.routemaster-bus-advert-front {
+	display: flex;
+	flex-flow: row;
+	position: relative;
+	top: 1.7rem;
+	left: 2.5rem;
+	width: 23rem;
+	height: 10rem;
+	background: rgb(230, 0, 0);
+	background: linear-gradient(90deg, rgba(230, 0, 0, 1) 0%, rgba(181, 33, 33, 1) 35%, rgba(198, 36, 36, 1) 100%);
+	transform: rotate(-5deg) skew(-6deg);
+}
+
+.routemaster-bus-advert-middle {
+	display: flex;
+	flex-flow: row;
+	width: 69rem;
+	height: 10.3rem;
+	background: rgb(198, 36, 36);
+	background: linear-gradient(90deg, rgba(198, 36, 36, 1) 0%, rgba(252, 60, 60, 1) 35%, rgba(255, 89, 89, 1) 100%);
+	transform: rotate(2deg) skew(0deg);
+	position: relative;
+	top: 2rem;
+	left: 0.3rem;
+}
+
+.routemaster-bus-number-container {
+	display: flex;
+	flex-flow: row;
+	padding: 2rem 2rem 2rem 2rem;
+}
+
+.routemaster-bus-route {
+	background: rgb(0, 0, 0);
+	background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(29, 29, 29, 1) 35%, rgba(47, 47, 47, 1) 100%);
+	/* height: 2rem; */
+	width: 100%;
+	border-radius: 1rem;
+	display: flex;
+	flex-flow: row;
+	color: white;
+	padding: 1rem;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 0.3rem solid rgb(36, 36, 36) k;
+}
+
+.routemaster-bus-route p {
+	font-size: 1.2rem;
+	margin-right: 1rem;
+}
+
+.routemaster-arriva-container {
+	display: flex;
+	flex-flow: column;
+	color: white;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	justify-content: end;
+	align-items: flex-end;
+	position: relative;
+	left: 2rem;
+}
+
+.routemaster-arriva-logo {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.routemaster-camera-side {
+	height: 1rem;
+	width: 1rem;
+	background: rgb(201, 194, 194);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.routemaster-camera-side-inner {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(3, 3, 3);
+	border-radius: 100%;
+}
+
+.arriva-logo {
+	height: 3rem;
+	width: 3rem;
+	margin: 0 1rem 0 1rem;
+	background: rgb(255, 255, 255);
+	border-radius: 100%;
+}
+
+.routemaster-arriva-logo h1 {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+
+.arriva-tagline {
+	font-size: 0.7rem;
+}
+
+.arriva-tagline span {
+	border: 0.2rem solid white;
+}
+
+.arriva-bus-number {
+	display: flex;
+	align-self: flex-start;
+	position: relative;
+	top: 2rem;
+	left: 3rem;
+	font-size: 1rem;
+}
+
+.routemaster-advertboard-container {
+	position: relative;
+	top: 2rem;
+	left: 4rem;
+	width: 43rem;
+	height: 6rem;
+	background: rgb(198, 36, 36);
+	background: linear-gradient(90deg, rgba(198, 36, 36, 1) 0%, rgba(252, 60, 60, 1) 35%, rgba(255, 89, 89, 1) 100%);
+	border: 0.3rem solid rgb(148, 38, 38);
+	transform: skew(5deg);
+}
+
+.routemaster-vent-container {
+	position: relative;
+	left: 5.8rem;
+	top: 1.6rem;
+	width: 4rem;
+	height: 6rem;
+	/* background: red; */
+	transform: rotate(-5deg);
+	border: 0.1rem solid rgb(99, 11, 11);
+	transform: rotate(-2deg);
+	border-radius: 0.3rem;
+	display: flex;
+	flex-flow: column;
+	padding: 0.2rem;
+}
+
+.routemaster-vent-gap {
+	width: 100%;
+	height: 0.1rem;
+	background: rgb(32, 32, 32);
+	margin: 0.2rem 0 0.2rem 0;
+}
+
+.routemaster-camera-front {
+	position: relative;
+	top: 2rem;
+	left: -1rem;
+	height: 1rem;
+	width: 1rem;
+	background: rgb(201, 194, 194);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.routemaster-camera-front-inner {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(3, 3, 3);
+	border-radius: 100%;
+}
+
+.routemaster-bus-frame-container {
+	position: absolute;
+	top: 3.4rem;
+	left: 18rem;
+	width: 10rem;
+	height: 7.8rem;
+	/* background: yellow; */
+	z-index: 5;
+	transform: rotate(4deg);
+	border-top: 0.4rem solid rgb(43, 43, 43);
+	border-left: 0.4rem solid rgb(43, 43, 43);
+	border-bottom: 0.4rem solid rgb(43, 43, 43);
+	border-radius: 1rem;
+}
+
+.routemaster-bus-wing-mirror-container {
+	position: absolute;
+	z-index: 6;
+	top: 17rem;
+	left: 20rem;
+	width: 8rem;
+	height: 8rem;
+	/* background: yellow; */
+	z-index: 5;
+	display: flex;
+	flex-flow: column;
+	transform: rotate(5deg);
+}
+
+.routemaster-bus-wing-mirror-top {
+	width: 6rem;
+	height: 2rem;
+	border-top: 0.3rem solid black;
+	border-right: 1rem solid black;
+	border-bottom: 0.3rem solid black;
+	border-left: 0.3rem solid black;
+}
+
+.routemaster-bus-wing-mirror-handle {
+	width: 0.3rem;
+	height: 14rem;
+	background: black;
+	position: relative;
+	z-index: 2;
+}
+
+.routemaster-bus-wing-mirror-grip {
+	width: 1rem;
+	height: 1rem;
+	background: black;
+	border-radius: 100%;
+	position: relative;
+	top: -0.1rem;
+	right: 0.3rem;
+	z-index: 2;
+}
+
+.routemaster-bus-wing-mirror {
+	width: 3rem;
+	height: 20rem;
+	background: rgb(51, 51, 51);
+	position: relative;
+	top: -1rem;
+	left: -1.3rem;
+	z-index: 1;
+	border: 0.2rem solid black;
+}
+
+.routemaster-bus-panels-container {
+}
+
+.routemaster-bus-panel-one {
+	height: 2rem;
+	width: 2rem;
+	background: rgb(44, 44, 44);
+	position: absolute;
+	top: 35rem;
+	left: 35rem;
+	border-radius: 100%;
+	border: 0.2rem solid grey;
+	z-index: 5;
+}
+
+.routemaster-bus-panel-two {
+	height: 2rem;
+	width: 2rem;
+	background: rgb(44, 44, 44);
+	position: absolute;
+	top: 37rem;
+	left: 60rem;
+	border-radius: 100%;
+	border: 0.2rem solid grey;
+	z-index: 5;
+}
+
+.routemaster-bus-panel-three {
+	height: 2rem;
+	width: 2rem;
+	background: rgb(44, 44, 44);
+	position: absolute;
+	top: 39.5rem;
+	left: 80rem;
+	border-radius: 100%;
+	border: 0.2rem solid grey;
+	z-index: 5;
+}
+
+.routemaster-bus-open-btn {
+	height: 1rem;
+	width: 1rem;
+	background: rgb(172, 172, 172);
+	position: absolute;
+	top: 37.5rem;
+	left: 63rem;
+	border-radius: 100%;
+	border: 0.2rem solid rgb(251, 255, 43);
+	z-index: 5;
+}
+
+.routemaster-bus-side-lights-one {
+	width: 1rem;
+	height: 0.5rem;
+	background: orange;
+	position: absolute;
+	top: 42rem;
+	left: 33rem;
+	z-index: 5;
+	border-radius: 30%;
+}
+
+.routemaster-bus-side-lights-two {
+	width: 1rem;
+	height: 0.5rem;
+	background: orange;
+	position: absolute;
+	top: 42rem;
+	left: 45rem;
+	z-index: 5;
+	border-radius: 30%;
+}
+
+.routemaster-bus-side-lights-three {
+	width: 1rem;
+	height: 0.5rem;
+	background: orange;
+	position: absolute;
+	top: 37rem;
+	left: 45rem;
+	z-index: 5;
+	border-radius: 30%;
+}
+
+.routemaster-bus-side-lights-four {
+	width: 1rem;
+	height: 0.5rem;
+	background: orange;
+	position: absolute;
+	top: 37.5rem;
+	left: 58rem;
+	z-index: 5;
+	border-radius: 30%;
+}
+
+.routemaster-bus-side-lights-five {
+	width: 1rem;
+	height: 0.5rem;
+	background: orange;
+	position: absolute;
+	top: 44rem;
+	left: 57.5rem;
+	z-index: 5;
+	border-radius: 30%;
+}
+
+.routemaster-bus-side-lights-six {
+	width: 1rem;
+	height: 0.5rem;
+	background: orange;
+	position: absolute;
+	top: 41rem;
+	left: 70rem;
+	z-index: 5;
+	border-radius: 30%;
+}
+
+.routemaster-bus-side-flap-one {
+	width: 0.5rem;
+	height: 1rem;
+	background: white;
+	position: absolute;
+	top: 47.1rem;
+	left: 62rem;
+	z-index: 6;
+}
+
+.routemaster-bus-side-flap-two {
+	width: 0.5rem;
+	height: 1rem;
+	background: white;
+	position: absolute;
+	top: 47.2rem;
+	left: 69rem;
+	z-index: 6;
+}
+
+.routemaster-bus-ground-floor-container {
+	/* background: rgb(255, 255, 255); */
+	height: 31rem;
+	width: 68.7rem;
+	position: relative;
+	top: -26rem;
+}
+
+.routemaster-bus-front-bottom {
+	position: relative;
+	top: 0.5rem;
+	left: 2.5rem;
+	background: yellow;
+	height: 29rem;
+	width: 20.1rem;
+	transform: rotate(0deg);
+	display: flex;
+	flex-flow: column;
+}
+
+.routemaster-bus-front-bottom-window {
+	width: 20.1rem;
+	height: 24rem;
+	background: var(--main-window-color);
+	border: 0.5rem solid rgb(37, 37, 37);
+}
+
+.routemaster-bus-front-bottom-lights-container {
+	width: 20.1rem;
+	height: 5rem;
+	background: rgb(22, 22, 22);
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	z-index: 1;
+	padding-right: 1rem;
+	padding-top: 0.2rem;
+}
+
+.routemaster-bus-lights-left {
+	border-radius: 100%;
+	height: 3rem;
+	width: 3rem;
+	background: rgb(230, 230, 230);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(224, 224, 224, 1) 35%,
+		rgba(233, 233, 233, 1) 100%
+	);
+	position: relative;
+	border: 0.2rem solid rgb(82, 0, 0);
+}
+
+.routemaster-bus-lights-right {
+	border-radius: 100%;
+	height: 3rem;
+	width: 3rem;
+	background: rgb(230, 230, 230);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(224, 224, 224, 1) 35%,
+		rgba(233, 233, 233, 1) 100%
+	);
+	position: relative;
+	border: 0.2rem solid rgb(22, 22, 22);
+}
+
+.routemaster-bus-lights-top-left {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 0.2rem;
+	right: 1.8rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-top-center {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	right: 1.2rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-top-right {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 0.2rem;
+	left: 1.9rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-middle-left {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 1rem;
+	right: 2.2rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-middle-center {
+	height: 1rem;
+	width: 1rem;
+	background: rgb(218, 215, 53);
+	border-radius: 100%;
+	position: absolute;
+	top: 0.7rem;
+	right: 1rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-middle-right {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 0.9rem;
+	left: 2.2rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-bottom-left {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 1.8rem;
+	right: 2rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-bottom-center {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 2.2rem;
+	right: 1.2rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+
+.routemaster-bus-lights-bottom-right {
+	height: 0.5rem;
+	width: 0.5rem;
+	background: rgb(146, 146, 146);
+	border-radius: 100%;
+	position: absolute;
+	top: 1.8rem;
+	left: 2rem;
+	border: 0.2rem solid rgb(39, 39, 39);
+}
+.routemaster-bus-front-panel {
+	position: absolute;
+	bottom: 0rem;
+	width: 0;
+	height: 0;
+	border-bottom: 11rem solid rgb(196, 18, 18);
+	border-right: 20rem solid transparent;
+	z-index: 1;
+}
+
+.routemaster-bus-front-panel-lights-container {
+	position: relative;
+	bottom: -5rem;
+	left: 0.5rem;
+}
+
+.routemaster-bus-badge {
+	width: 2rem;
+	height: 2rem;
+	background: rgb(196, 18, 18);
+	border-radius: 100%;
+	position: relative;
+	left: 8.5rem;
+	bottom: 2rem;
+	border: 0.2rem solid rgb(180, 180, 180);
+}
+
+.routemaster-bus-badge-inner {
+	position: relative;
+	top: 0.5rem;
+	right: 0.4rem;
+	width: 2.4rem;
+	height: 0.4rem;
+	background: rgb(180, 180, 180);
+}
+
+.routemaster-bus-stickers-front {
+	width: 4rem;
+	height: 4rem;
+	/* background: yellow; */
+	position: absolute;
+	left: 17rem;
+	bottom: 2rem;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 5;
+}
+
+.routemaster-bus-stickers-side {
+	width: 4rem;
+	height: 4rem;
+	/* background: yellow; */
+	position: absolute;
+	left: 1rem;
+	bottom: 8rem;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 5;
+}
+
+.disabled-sticker,
+.elderly-sticker {
+	background: rgb(15, 172, 219);
+	height: 1rem;
+	width: 1rem;
+	border-radius: 100%;
+	border: 0.2rem solid white;
+}
+
+.routemaster-bus-numberplate-container {
+	position: relative;
+	bottom: 1.2rem;
+	width: 19rem;
+	height: 1.8rem;
+	/* background: chartreuse; */
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+
+.routemaster-bus-foglight {
+	width: 1rem;
+	height: 1rem;
+	background: rgb(180, 180, 180);
+	border-radius: 100%;
+}
+
+.routemaster-bus-numberplate {
+	width: 10rem;
+	height: 1.4rem;
+	background: white;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 600;
+	border: 0.1rem solid black;
+}
+
+.routemaster-bus-side-container {
+	width: 46.1rem;
+	height: 29rem;
+	/* background: chartreuse; */
+	opacity: 1;
+	position: relative;
+	left: 22.3rem;
+	bottom: 28rem;
+	transform: rotate(-1deg) skewY(1deg) skewX(0deg);
+}
+
+.routemaster-bus-sidedoor-container {
+	width: 10rem;
+	height: 29rem;
+	/* background: rgb(229, 255, 0); */
+	display: flex;
+	flex-flow: row;
+}
+
+.routemaster-bus-sidedoor-one-container,
+.routemaster-bus-sidedoor-two-container {
+	display: flex;
+	flex-flow: column;
+}
+
+.routemaster-bus-door-one {
+	background: var(--main-window-color);
+	height: 26rem;
+	width: 5rem;
+	border: 0.8rem solid rgb(22, 22, 22);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-flow: row;
+}
+
+.routemaster-bus-door-sticker-front {
+	margin-top: 8rem;
+	width: 1.3rem;
+	height: 7rem;
+	background: white;
+	border-bottom: 6rem solid rgb(82, 82, 238);
+}
+
+.routemaster-bus-door-sticker-mid {
+	margin-top: 7rem;
+	width: 1.3rem;
+	height: 7rem;
+	background: white;
+	border-bottom: 6rem solid rgb(82, 82, 238);
+}
+
+.routemaster-bus-door-sticker-back {
+	margin-top: 7rem;
+	width: 1.3rem;
+	height: 7rem;
+	background: white;
+	border-bottom: 6rem solid rgb(82, 82, 238);
+}
+
+.routemaster-bus-door-one-bottom {
+	height: 1.2rem;
+	width: 5rem;
+	background: rgb(22, 22, 22);
+	border-top: 0.1rem solid grey;
+}
+
+.routemaster-bus-door-one-floor {
+	height: 0.8rem;
+	width: 5rem;
+	background: rgb(148, 148, 148);
+	border-top: 0.1rem solid grey;
+}
+
+.routemaster-bus-door-one-bus-red {
+	height: 0.6rem;
+	width: 5rem;
+	background: rgb(196, 18, 18);
+}
+
+.routemaster-bus-door-two {
+	background: var(--main-window-color);
+	height: 26rem;
+	width: 5rem;
+	border: 0.8rem solid rgb(22, 22, 22);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row;
+}
+
+.routemaster-bus-door-two-bottom {
+	height: 1.2rem;
+	width: 5rem;
+	background: rgb(22, 22, 22);
+	border-top: 0.1rem solid grey;
+}
+
+.routemaster-bus-door-two-floor {
+	height: 0.8rem;
+	width: 5rem;
+	background: rgb(148, 148, 148);
+	border-top: 0.1rem solid grey;
+}
+
+.routemaster-bus-door-two-bus-red {
+	height: 0.6rem;
+	width: 5rem;
+	background: rgb(196, 18, 18);
+}
+
+.routemaster-bus-wheel-and-sidedoor-container {
+	/* background: yellow; */
+	height: 30rem;
+	width: 12rem;
+	position: relative;
+	z-index: 2;
+	bottom: 30rem;
+	left: 10rem;
+	display: flex;
+	flex-flow: column;
+	transform: rotate(0deg) skewY(1deg) skewX(0deg);
+}
+
+.routemaster-bus-window-number-container {
+	width: 14rem;
+	height: 15rem;
+	background: var(--main-window-color);
+	border: 0.3rem solid black;
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-start;
+}
+
+.routemaster-bus-window-number {
+	background: black;
+	height: 5rem;
+	width: 9.5rem;
+	display: flex;
+	flex-flow: row;
+	color: white;
+	align-items: center;
+	padding: 1rem;
+	transform: rotate(0deg);
+}
+
+.routemaster-bus-window-number h1 {
+	font-size: 1.3rem;
+	margin-top: 2rem;
+	margin-right: 0.5rem;
+}
+
+.routemaster-bus-window-number p {
+	font-size: 0.8rem;
+	margin-top: 2rem;
+}
+
+.routemaster-bus-wheel-one-container {
+	width: 14rem;
+	height: 14.6rem;
+	background: rgb(198, 36, 36);
+	background: linear-gradient(90deg, rgba(198, 36, 36, 1) 0%, rgba(252, 60, 60, 1) 35%, rgba(255, 89, 89, 1) 100%);
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.routemaster-bus-wheel-arch-one {
+	background: rgb(0, 0, 0);
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	position: relative;
+	top: 2rem;
+	z-index: 2;
+}
+
+.routemaster-bus-wheel-one {
+	background: rgb(32, 32, 32);
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	position: relative;
+	top: 0.8rem;
+	right: -0.1rem;
+}
+
+.routemaster-bus-wheel-one-inner {
+	background: rgb(77, 40, 40);
+	width: 7rem;
+	height: 7rem;
+	border-radius: 100%;
+	position: relative;
+	top: 1.4rem;
+	left: 1.4rem;
+}
+
+.routemaster-bus-wheel-one-inner-bolts {
+	background: rgb(189, 189, 189);
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	position: relative;
+	top: 0.9rem;
+	left: 1rem;
+}
+
+.routemaster-bus-wheel-one-inner-ring {
+	background: rgb(31, 31, 31);
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	position: relative;
+	top: 0.9rem;
+	left: 1rem;
+}
+
+.routemaster-bus-wheel-one-tire {
+	background: rgb(31, 31, 31);
+	width: 4rem;
+	height: 2rem;
+	position: absolute;
+	z-index: 1;
+	bottom: -1rem;
+	left: 11.6rem;
+	border-radius: 1rem;
+	transform: rotate(33deg);
+}
+
+.routemaster-bus-back-half-container {
+	background: red;
+	width: 30rem;
+	height: 26.7rem;
+	position: relative;
+	bottom: 57rem;
+	left: 24rem;
+	z-index: 1;
+	display: flex;
+	flex-flow: row;
+}
+
+.routemaster-bus-sidedoor-middle-container {
+	width: 10rem;
+	height: 29rem;
+	/* background: rgb(229, 255, 0); */
+	display: flex;
+	flex-flow: row;
+	position: relative;
+	bottom: 1rem;
+}
+
+.routemaster-bus-sidedoor-middle-one-container,
+.routemaster-bus-sidedoor-middle-two-container {
+	display: flex;
+	flex-flow: column;
+}
+
+.routemaster-bus-middle-door-one {
+	background: var(--main-window-color);
+	height: 27rem;
+	width: 5rem;
+	border: 0.8rem solid rgb(22, 22, 22);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-flow: row;
+}
+
+.routemaster-bus-middle-door-one-bottom {
+	height: 0.7rem;
+	width: 5rem;
+	background: rgb(22, 22, 22);
+	border-top: 0.1rem solid grey;
+}
+
+.routemaster-bus-middle-door-two {
+	background: var(--main-window-color);
+	height: 27rem;
+	width: 5rem;
+	border: 0.8rem solid rgb(22, 22, 22);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row;
+}
+
+.routemaster-bus-middle-door-two-bottom {
+	height: 0.7rem;
+	width: 5rem;
+	background: rgb(22, 22, 22);
+	border-top: 0.1rem solid grey;
+}
+
+.routemaster-bus-back-wheel-and-sidedoor-container {
+	/* background: yellow; */
+	height: 30rem;
+	width: 26rem;
+	position: relative;
+	z-index: 2;
+	bottom: 0.6rem;
+	left: 0rem;
+	display: flex;
+	flex-flow: column;
+	transform: rotate(0deg) skewY(1deg) skewX(0deg);
+}
+
+.routemaster-bus-back-window-number-container {
+	width: 26rem;
+	height: 13rem;
+	background: var(--main-window-color);
+	border: 0.3rem solid black;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+}
+
+.routemaster-bus-front-window-divider {
+	width: 0.5rem;
+	height: 15rem;
+	background: black;
+}
+
+.routemaster-bus-back-window-divider {
+	width: 0.5rem;
+	height: 12.5rem;
+	background: black;
+}
+
+.routemaster-bus-back-wheel-one-container {
+	width: 26rem;
+	height: 14.6rem;
+	background: rgb(198, 36, 36);
+	background: linear-gradient(90deg, rgba(198, 36, 36, 1) 0%, rgba(252, 60, 60, 1) 35%, rgba(255, 89, 89, 1) 100%);
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-right: 2rem;
+}
+
+.routemaster-bus-back-wheel-arch-one {
+	background: rgb(0, 0, 0);
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	position: relative;
+	top: 1.3rem;
+	z-index: 2;
+}
+
+.routemaster-bus-back-wheel-one {
+	background: rgb(32, 32, 32);
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	position: relative;
+	top: 0.8rem;
+	right: -0.1rem;
+}
+
+.routemaster-bus-back-wheel-one-inner {
+	background: rgb(77, 40, 40);
+	width: 7rem;
+	height: 7rem;
+	border-radius: 100%;
+	position: relative;
+	top: 1.5rem;
+	left: 1.5rem;
+}
+
+.routemaster-bus-back-wheel-one-inner-bolts {
+	/* background: rgb(189, 189, 189); */
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	position: relative;
+	top: 0.9rem;
+	left: 1rem;
+}
+
+.routemaster-bus-back-wheel-one-inner-ring {
+	background: rgb(31, 31, 31);
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	position: relative;
+	top: 0.9rem;
+	left: 1rem;
+}
+
+.routemaster-bus-back-wheel-one-tire {
+	background: rgb(31, 31, 31);
+	width: 4rem;
+	height: 2rem;
+	position: absolute;
+	z-index: 2;
+	bottom: -0.9rem;
+	left: 13rem;
+	border-radius: 1rem;
+	transform: rotate(23deg);
+}
+
+.routemaster-bus-side-tfl-logo {
+	position: absolute;
+	z-index: 6;
+	top: 18rem;
+	left: 7rem;
+	background: white;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.routemaster-bus-side-tfl-logo-inner {
+	position: relative;
+	z-index: 6;
+	top: 0;
+	left: 0;
+	background: rgb(255, 93, 93);
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+}
+
+.routemaster-bus-back-doors-container {
+	width: 5rem;
+	height: 30rem;
+	/* background: blue; */
+	position: absolute;
+	top: -0.6rem;
+	left: 36rem;
+	z-index: 5;
+	display: flex;
+	flex-flow: column;
+}
+
+.routemaster-bus-backdoor {
+	background: var(--main-window-color);
+	height: 27rem;
+	width: 100%;
+	border: 0.3rem solid black;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.routemaster-bus-backdoor-bottom {
+	width: 100%;
+	height: 0.9rem;
+	background: rgb(219, 219, 219);
+	border-bottom: 0.5rem solid rgb(250, 104, 104);
+}
+
+.routemaster-bus-side-tfl-logo-inner-text {
+	background: white;
+	width: 6rem;
+	height: 1rem;
+	color: rgb(172, 172, 172);
+	font-size: 1rem;
+	text-align: center;
+	position: relative;
+	right: 1.5rem;
+	top: 1rem;
+}
